@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="lista_formandos.aspx.cs">
       <DependentUpon>lista_formandos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="lista_formandos.aspx.designer.cs">
       <DependentUpon>lista_formandos.aspx</DependentUpon>

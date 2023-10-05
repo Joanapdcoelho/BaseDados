@@ -15,8 +15,6 @@ namespace BaseDados
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-
             string query = "";
 
             if(!Page.IsPostBack || ddl_Curso.SelectedItem.ToString() == "Todos")
@@ -28,8 +26,7 @@ namespace BaseDados
                 }
 
                 // Query que se quer executar
-                query = "SELECT formandos.num_formando, formandos.nome, formandos.morada, formandos.email, formandos.telemovel, cursos.curso FROM cursos INNER JOIN formandos ON cursos.cod_curso = formandos.cod_curso";                
-
+                query = "SELECT formandos.num_formando, formandos.nome, formandos.morada, formandos.email, formandos.telemovel, cursos.curso FROM cursos INNER JOIN formandos ON cursos.cod_curso = formandos.cod_curso";      
             }
             else
             {
@@ -50,10 +47,9 @@ namespace BaseDados
             DataSet myDataset = new DataSet();
 
             // Preencher o dataset com os dados da base de dados
-            myAdapter.Fill(myDataset);          
+            myAdapter.Fill(myDataset);    
 
-
-            // Carregar o XML no controle Xml
+            // Carregar o XML no controlo Xml
             Xml1.DocumentContent = myDataset.GetXml();
 
         }
